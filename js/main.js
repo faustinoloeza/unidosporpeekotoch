@@ -1,10 +1,22 @@
 // ================================================================
 // UNIDos por Peek Otoch — main.js
-// Para actualizar el progreso, cambia KILOS_ACTUALES al número real
 // ================================================================
 
-const KILOS_ACTUALES = 0; // <-- ACTUALIZA ESTE NÚMERO con los kg recolectados
 const META_KILOS = 200;
+
+async function leerKilos() {
+  const ID = "1xI-cUk6zefHj2v1aK1_RcdgjAO3lE74lGaZbyyO6eLs";
+  const url = `https://docs.google.com/spreadsheets/d/${ID}/gviz/tq?tqx=out:json&range=A2`;
+
+  const resp = await fetch(url);
+  const texto = await resp.text();
+
+  // La respuesta viene como: /*O_o*/google.visualization.Query.setResponse({...});
+  const json = JSON.parse(texto.substring(47).slice(0, -2));
+
+  const valor = json.table.rows[0].c[0].v;
+  return valor;
+}
 
 // ---------- AOS ----------
 AOS.init({ duration: 750, once: true, offset: 70, easing: 'ease-out-cubic' });
@@ -24,32 +36,38 @@ new Swiper('.mySwiper', {
 });
 
 // ---------- Progress bar ----------
-function animateProgress() {
+function animateProgress(kilosActuales) {
   const fill    = document.getElementById('progressFill');
   const counter = document.getElementById('kgActual');
-  const pct     = Math.min((KILOS_ACTUALES / META_KILOS) * 100, 100);
+  const pct     = Math.min((kilosActuales / META_KILOS) * 100, 100);
 
   let current = 0;
   const fps   = 60;
   const dur   = 1800; // ms
   const steps = (fps * dur) / 1000;
-  const inc   = KILOS_ACTUALES / steps;
+  const inc   = kilosActuales / steps;
 
   const ticker = setInterval(() => {
-    current = Math.min(current + inc, KILOS_ACTUALES);
+    current = Math.min(current + inc, kilosActuales);
     counter.textContent = Math.floor(current);
-    if (current >= KILOS_ACTUALES) clearInterval(ticker);
+    if (current >= kilosActuales) clearInterval(ticker);
   }, 1000 / fps);
 
   setTimeout(() => { fill.style.width = pct + '%'; }, 200);
 
-  // Update percentage label
   document.getElementById('progressPct').textContent = Math.round(pct) + '%';
 }
 
 // Only run animation when hero enters viewport
 const heroObserver = new IntersectionObserver(
-  entries => { if (entries[0].isIntersecting) { animateProgress(); heroObserver.disconnect(); } },
+  entries => {
+    if (entries[0].isIntersecting) {
+      heroObserver.disconnect();
+      leerKilos()
+        .then(kilos => animateProgress(kilos ?? 0))
+        .catch(() => animateProgress(0));
+    }
+  },
   { threshold: 0.25 }
 );
 heroObserver.observe(document.getElementById('hero'));

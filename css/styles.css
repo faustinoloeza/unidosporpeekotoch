@@ -552,5 +552,17 @@
     .gap-hero { gap: 14px; }
     @media (max-width: 576px) {
       .floating-badge-1, .floating-badge-2 { display: none; }
-      .stat-grid { grid-template-columns: repeat(3, 1fr); }
+      .stat-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+      }
+      .stat-item {
+        padding: 0.85rem 0.35rem;
+      }
+      .stat-num {
+        font-size: 1.4rem;
+      }
+      .stat-label {
+        font-size: 0.68rem;
+      }
     }
