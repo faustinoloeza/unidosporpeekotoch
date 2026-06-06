@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNIDos por Peek Otoch · UNID Cancún</title>
+  <meta name="description" content="Campaña estudiantil de UNID Cancún para apoyar al refugio Peek Otoch A.C. Meta: 200 kg de croquetas." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Swiper -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ======================== NAVBAR ======================== -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#hero">
+      <span class="brand-unid">UNID</span>os por Peek Otoch
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+      aria-controls="navMenu" aria-expanded="false" aria-label="Menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+        <li class="nav-item"><a class="nav-link" href="#refugio">El Refugio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ayudar">Cómo Ayudar</a></li>
+        <li class="nav-item"><a class="nav-link" href="#puntos">Recolección</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+        <li class="nav-item ms-lg-2">
+          <a class="nav-link nav-cta" href="#ayudar">
+            <i class="fas fa-paw me-1"></i> Donar
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ======================== HERO ======================== -->
+<section id="hero">
+  <div class="hero-paw-bg"></div>
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+
+  <div class="container py-5 position-relative" style="z-index:2;">
+    <div class="row align-items-center g-5 py-4">
+
+      <!-- LEFT -->
+      <div class="col-lg-6" data-aos="fade-right">
+        <span class="badge-pill badge-white mb-3">
+          <i class="fas fa-graduation-cap"></i>
+          UNID Cancún · Campaña Estudiantil
+        </span>
+
+        <h1 class="hero-title">
+          <span class="unid-span">UNID</span>os<br>por Peek Otoch
+        </h1>
+
+        <p class="hero-subtitle">
+          Reconocemos la labor de la fundación
+          <strong>Peek Otoch A.C.</strong> — Casa Hogar de Protección Animal.
+          Juntos podemos reunir <strong style="color:var(--accent);">200 kg de croquetas</strong>
+          para sus más de 70 perritos rescatados.
+        </p>
+
+        <!-- Progress -->
+        <div class="progress-glass">
+          <div class="progress-top">
+            <div>
+              <div class="progress-top-label"><i class="fas fa-bone me-2"></i>Meta de Croquetas</div>
+            </div>
+            <div class="text-end">
+              <div class="progress-kg">
+                <span id="kgActual">0</span>
+                <span>/ 200 kg</span>
+              </div>
+            </div>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="progress-bottom">
+            <span><i class="fas fa-heart me-1" style="color:var(--accent);"></i>¡Cada kilo cuenta!</span>
+            <span class="progress-pct" id="progressPct">0%</span>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-hero">
+          <a href="#puntos" class="btn-hero btn-hero-primary">
+            <i class="fas fa-map-marker-alt"></i> Lleva Croquetas
+          </a>
+          <a href="#ayudar" class="btn-hero btn-hero-outline">
+            <i class="fas fa-hand-holding-heart"></i> Otras Formas
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="150">
+        <div class="hero-img-wrap">
+          <span class="floating-badge floating-badge-1">
+            <i class="fas fa-paw me-1"></i> Muchos perritos rescatados
+          </span>
+          <img src="poster.jpeg" alt="UNIDos por Peek Otoch — Poster oficial" />
+          <span class="floating-badge floating-badge-2">
+            <i class="fas fa-heart me-1"></i> Meta: 200 kg
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== REFUGIO ======================== -->
+<section id="refugio">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-5 text-center" data-aos="fade-right">
+        <img
+          src="514476448_10092676537477105_824847491417581549_n.jpg"
+          alt="Logo Peek Otoch A.C."
+          class="refugio-logo"
+        />
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-left" data-aos-delay="100">
+        <span class="badge-pill badge-accent mb-3">
+          <i class="fas fa-home"></i> Sobre el Refugio
+        </span>
+        <h2 class="section-title">
+          Casa Hogar de Protección Animal<br>
+          <span class="accent">Peek Otoch A.C.</span>
+        </h2>
+        <div class="refugio-body mt-3">
+          <p>
+            Durante nuestra visita conocimos el increíble trabajo de <strong>Doña Silvia Guzmán</strong>,
+            fundadora de Peek Otoch — que en Maya significa <em>"Casa de Perritos"</em>.
+            Actualmente cuida y rescata a más de <strong>70 perritos</strong> distribuidos en distintas ubicaciones.
+          </p>
+          <p>
+            Muchos han sido rescatados de situaciones de <strong>abandono, maltrato o discapacidad</strong>.
+            Cada caso es documentado con fotografías e historial médico. El esposo de Silvia aprendió
+            a fabricar <strong>prótesis</strong> para ayudarles a recuperar movilidad.
+          </p>
+          <p>
+            El refugio se sostiene gracias a <strong>donaciones, bazares y la venta de ropa en tianguis</strong>.
+            Silvia busca adquirir un terreno en la Zona Continental para brindar mejores condiciones,
+            especialmente a los perritos con alguna discapacidad.
+          </p>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-item" data-aos="zoom-in" data-aos-delay="0">
+            <div class="stat-num">Cientos+</div>
+            <div class="stat-label">Perritos rescatados</div>
+          </div>
+          <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+            <div class="stat-num">200</div>
+            <div class="stat-label">kg meta croquetas</div>
+          </div>
+          <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stat-num">♥</div>
+            <div class="stat-label">Lleno de amor</div>
+          </div>
+        </div>
+
+        <a href="https://www.facebook.com/silvia.guzmanperera/" target="_blank" rel="noopener" class="btn-fb">
+          <i class="fab fa-facebook-f"></i> Visita el Facebook del Refugio
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== CÓMO AYUDAR ======================== -->
+<section id="ayudar">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <span class="badge-pill badge-accent mb-3">
+        <i class="fas fa-hands-helping"></i> Formas de Ayudar
+      </span>
+      <h2 class="section-title">¿Cómo puedes <span class="accent">contribuir</span>?</h2>
+      <p class="section-sub mx-auto">
+        Elige la forma que más te convenga. No importa cuánto dones — lo que importa es sumarse.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Croquetas -->
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="help-card">
+          <div class="help-icon-wrap ic-amber">
+            <i class="fas fa-bone"></i>
+          </div>
+          <h4>Lleva Croquetas</h4>
+          <p>Trae croquetas a los puntos de recolección dentro de UNID Cancún. Cualquier marca y presentación es bienvenida.</p>
+          <a href="#puntos" class="link-arrow link-arrow-accent mt-3">
+            Ver ubicaciones <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- BBVA -->
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="help-card">
+          <div class="help-icon-wrap ic-blue">
+            <i class="fas fa-university"></i>
+          </div>
+          <h4>Donación BBVA</h4>
+          <p>Transfiere directamente al refugio desde cualquier banco vía número de cuenta o CLABE.</p>
+          <div class="bank-box mt-3">
+            <small>Número de tarjeta:</small>
+            <strong>4152 3140 9665 9654</strong>
+            <small class="mt-1">A nombre de: Moisés Cordero</small>
+            <button class="btn-copy" data-copy="4152314096659654">
+              <i class="fas fa-copy"></i> Copiar número
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PayPal -->
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="help-card">
+          <div class="help-icon-wrap ic-paypal">
+            <i class="fab fa-paypal"></i>
+          </div>
+          <h4>PayPal</h4>
+          <p>Dona desde cualquier parte del mundo de forma rápida y segura a través de PayPal.</p>
+          <div class="bank-box mt-3">
+            <small>Cuenta PayPal:</small>
+            <strong style="color:#003087;">@OnlymoyDonaciones</strong>
+            <button class="btn-copy" data-copy="@OnlymoyDonaciones">
+              <i class="fas fa-copy"></i> Copiar cuenta
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Difunde -->
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="help-card">
+          <div class="help-icon-wrap ic-fb">
+            <i class="fas fa-share-alt"></i>
+          </div>
+          <h4>Difunde la Campaña</h4>
+          <p>Comparte esta página en tus redes. Hacer ruido también es ayudar — llega a más personas que puedan sumarse.</p>
+          <a href="https://www.facebook.com/silvia.guzmanperera/" target="_blank" rel="noopener"
+             class="link-arrow link-arrow-fb mt-3">
+            <i class="fab fa-facebook me-1"></i> Peek Otoch en Facebook
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================== PUNTOS DE RECOLECCIÓN ======================== -->
+<section id="puntos">
+  <div class="container position-relative" style="z-index:2;">
+
+    <div class="section-header text-center" data-aos="fade-up">
+      <span class="badge-pill badge-white mb-3">
+        <i class="fas fa-map-marker-alt"></i> Puntos de Recolección
+      </span>
+      <h2 class="section-title puntos-title">¿Dónde dejar las croquetas?</h2>
+      <p class="section-sub puntos-sub mx-auto">
+        Encuentra los puntos habilitados dentro de <strong style="color:#fff;">UNID Cancún</strong>
+        para depositar tu donación de manera presencial.
+      </p>
+    </div>
+
+    <div class="row g-4 justify-content-center mb-5">
+
+      <div class="col-md-5" data-aos="fade-up" data-aos-delay="0">
+        <div class="punto-card">
+          <div class="punto-icon-wrap">
+            <i class="fas fa-door-open"></i>
+          </div>
+          <h5>Oficina de la Dirección</h5>
+          <p>
+            Acude directamente a las oficinas de dirección de la universidad
+            y entrega tu donación al personal. Te esperan con gusto.
+          </p>
+          <div class="punto-horario">
+            <i class="fas fa-clock"></i> Horario de oficina
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5" data-aos="fade-up" data-aos-delay="150">
+        <div class="punto-card">
+          <div class="punto-icon-wrap">
+            <i class="fas fa-concierge-bell"></i>
+          </div>
+          <h5>Recepción de la Universidad</h5>
+          <p>
+            En la entrada principal de UNID Cancún. El equipo de recepción recibirá
+            tu donación de forma rápida y sencilla.
+          </p>
+          <div class="punto-horario">
+            <i class="fas fa-clock"></i> Horario de atención
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center" data-aos="fade-up">
+      <p style="color:rgba(255,255,255,0.55); margin-bottom:1.25rem; font-size:0.9rem;">
+        ¿Tienes dudas sobre la entrega o el acopio? Contáctanos por WhatsApp:
+      </p>
+      <a href="https://wa.me/529982656115" target="_blank" rel="noopener" class="btn-wa">
+        <i class="fab fa-whatsapp" style="font-size:1.2rem;"></i>
+        998 265 6115
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ======================== GALERÍA ======================== -->
+<section id="galeria">
+  <div class="container">
+    <div class="section-header text-center" data-aos="fade-up">
+      <span class="badge-pill badge-accent mb-3">
+        <i class="fas fa-images"></i> Galería
+      </span>
+      <h2 class="section-title">Conoce a los <span class="accent">Perritos</span></h2>
+      <p class="section-sub mx-auto">
+        Estos son algunos de los muchos perritos que Doña Silvia cuida con amor en Peek Otoch.
+        Cada uno tiene su historia.
+      </p>
+    </div>
+
+    <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="perritos/494087962_9601493356595428_7803489920397955298_n.jpg" alt="Perrito del refugio Peek Otoch" />
+        </div>
+        <div class="swiper-slide">
+          <img src="perritos/705185623_26865419966442832_2314615039331937637_n.jpg" alt="Perrito del refugio Peek Otoch" />
+        </div>
+        <div class="swiper-slide">
+          <img src="perritos/710799568_26975902022061292_8751967554305620377_n.jpg" alt="Perrito del refugio Peek Otoch" />
+        </div>
+        <div class="swiper-slide">
+          <img src="perritos/710827642_26949172724734222_2929206806789044541_n.jpg" alt="Perrito del refugio Peek Otoch" />
+        </div>
+        <div class="swiper-slide">
+          <img src="perritos/713544528_26986615217656639_2268431702317568740_n.jpg" alt="Perrito comiendo croquetas en el refugio" />
+        </div>
+        <div class="swiper-slide">
+          <img src="perritos/715376088_27027935330191294_4258582371535694523_n.jpg" alt="Oreo el guapetón — Peek Otoch" />
+        </div>
+        <div class="swiper-slide">
+          <img src="perritos/715435394_27027934926858001_2364172175294566855_n.jpg" alt="La chismosa de una oreja — Peek Otoch" />
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Adopciones note -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-8">
+        <div class="d-flex align-items-center gap-3 p-4 rounded-4 border"
+             style="border-color: rgba(245,166,35,0.3) !important; background: rgba(245,166,35,0.05);"
+             data-aos="fade-up">
+          <div style="font-size:2.2rem; flex-shrink:0;">🐾</div>
+          <div>
+            <strong style="color:var(--primary);">¡Hay cachorros en adopción!</strong>
+            <p class="mb-0" style="font-size:0.88rem; color:var(--text-muted); margin-top:3px;">
+              Si estás interesado en adoptar, comunícate al
+              <a href="https://wa.me/529982656115" target="_blank" style="color:var(--accent); font-weight:600;">998 265 6115</a>
+              o visita el
+              <a href="https://www.facebook.com/silvia.guzmanperera/" target="_blank" style="color:#1877f2; font-weight:600;">Facebook del refugio</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ======================== CTA ======================== -->
+<section id="cta">
+  <div class="container text-center">
+    <div data-aos="zoom-in">
+      <h2 class="cta-title">¡Juntos podemos lograrlo!</h2>
+      <p class="cta-sub mx-auto">
+        Cada kilo de croquetas que donas se convierte en días de alegría y salud para uno de estos perritos.
+        No importa cuánto dones — lo que importa es el gesto de sumarte.
+      </p>
+      <div class="d-flex flex-wrap gap-3 justify-content-center mt-4">
+        <a href="#puntos" class="btn-cta-dark">
+          <i class="fas fa-map-marker-alt"></i> Puntos de Recolección
+        </a>
+        <a href="https://www.facebook.com/silvia.guzmanperera/" target="_blank" rel="noopener" class="btn-cta-fb">
+          <i class="fab fa-facebook-f"></i> Facebook del Refugio
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== FOOTER ======================== -->
+<footer>
+  <div class="container">
+    <div class="row align-items-center gy-3">
+      <div class="col-md-5">
+        <div class="footer-brand">
+          <span class="accent">UNID</span>os por Peek Otoch
+        </div>
+        <p class="footer-meta">Campaña estudiantil · UNID Cancún · 2025</p>
+        <p class="footer-copy mt-1">
+          En apoyo a Peek Otoch A.C. — Casa Hogar de Protección Animal<br>
+          Fundado por Doña Silvia Guzmán Perera
+        </p>
+      </div>
+
+      <div class="col-md-4 text-md-center">
+        <p class="footer-copy mb-1">Contacto del refugio:</p>
+        <a href="https://wa.me/529982656115" target="_blank"
+           style="color:rgba(255,255,255,0.65); font-size:0.88rem; font-weight:600;">
+          <i class="fab fa-whatsapp me-1" style="color:#25d366;"></i>998 265 6115
+        </a>
+      </div>
+
+      <div class="col-md-3 text-md-end">
+        <div class="footer-social">
+          <a href="https://www.facebook.com/silvia.guzmanperera/" target="_blank" rel="noopener"
+             aria-label="Facebook del refugio">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/529982656115" target="_blank" rel="noopener"
+             aria-label="WhatsApp del refugio">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ======================== SCRIPTS ======================== -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
